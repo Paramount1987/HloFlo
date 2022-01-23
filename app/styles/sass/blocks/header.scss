@@ -1,0 +1,6 @@
+.header {
+	max-width: $container-max-width - $grid-gutter-width;
+	margin: 0 auto;
+	padding: 0 math.div($grid-gutter-width, 2);
+	outline: 1px solid red;
+}

@@ -1,5 +1,11 @@
 // USER VARIABLES SECTION
 
+// COLORS
+$pink: #e0ccdb
+
+// SIZES
+$container-max-width: 1200px
+
 $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
@@ -49,6 +55,7 @@ input, textarea
 		border-color: green
 
 body
+	background-color: $pink
 	font-family: $userfont
 	font-size: $fontsize
 	line-height: $lineheight
@@ -56,3 +63,8 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+
+.wrapper
+	max-width: $container-max-width - $grid-gutter-width;
+	margin: 0 auto
+	padding: 0 math.div($grid-gutter-width, 2)
