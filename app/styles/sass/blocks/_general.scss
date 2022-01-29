@@ -1,0 +1,24 @@
+// GENERAL PROJECT STYLES
+.bg {
+	&-green {
+		background-color: $green !important;
+	}
+	&-green-light {
+		background-color: $green-light !important;
+	}
+	&-yellow {
+		background-color: $yellow !important;
+	}
+	&-yellow-light {
+		background-color: $yellow-light !important;
+	}
+	&-red {
+		background-color: $red !important;
+	}
+	&-brown {
+		background-color: $brown !important;
+	}
+	&-blue {
+		background-color: $blue !important;
+	}
+}

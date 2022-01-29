@@ -2,6 +2,13 @@
 
 // COLORS
 $pink: #e0ccdb
+$green: #81a375
+$green-light: #d3e4cb
+$yellow: #ffcf59
+$yellow-light: #ffE093
+$red: #e26f6b
+$brown: #dd853e
+$blue: #81a3e0
 
 // SIZES
 $container-max-width: 1200px
@@ -9,8 +16,10 @@ $container-max-width: 1200px
 $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
-$lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$lineheight: 1.45 // Document Line Height
+$userfont: Archaism, sans-serif // User Font Family
+$helveticafont: "Helvetica Neue", Helvetica, sans-serif
+$ttbackward: ttbackward, sans-serif
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -18,11 +27,11 @@ $grid-gutter-width: 30px
 $gutter: $grid-gutter-width
 
 // IMPORT SECTION
-
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/swiper/swiper.scss'
 
 // FONTS LOAD SECTION
 
@@ -33,10 +42,11 @@ $gutter: $grid-gutter-width
 		font-weight: $fweight
 		src: url($furl) format('woff2')
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Archaism', normal, 400, '../fonts/Archaism-Ct0Wd100-Trial.woff2')
+@include font('Archaism', normal, 300, '../fonts/Archaism-Ct1Wd100-Trial.woff2')
+@include font('Archaism', normal, 100, '../fonts/Archaism-Ct2Wd100-Trial.woff2')
+
+@include font('ttbackward', normal, 100, '../fonts/ttbackwardsscriptregular-Reg.woff2')
 
 // GENERAL CSS SETTINGS
 
@@ -65,6 +75,6 @@ body
 	overflow-x: hidden
 
 .wrapper
-	max-width: $container-max-width - $grid-gutter-width;
+	max-width: $container-max-width - $grid-gutter-width
 	margin: 0 auto
 	padding: 0 math.div($grid-gutter-width, 2)

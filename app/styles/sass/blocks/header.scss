@@ -1,6 +1,56 @@
 .header {
-	max-width: $container-max-width - $grid-gutter-width;
+	max-width: $container-max-width - $gutter;
 	margin: 0 auto;
-	padding: 0 math.div($grid-gutter-width, 2);
-	outline: 1px solid red;
+	padding: 50px math.div($gutter, 2) 100px math.div($gutter, 2);
+
+	&-row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-nav {
+		display: none;
+	}
+
+	&-logo__link {
+		display: inline-block;
+	}
+
+	&-btn__menu {
+		background: none;
+		border: none;
+
+		span {
+			display: block;
+			width: 27px;
+			height: 6px;
+			background-color: #231f20;
+
+			& + span {
+				width: 38px;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		&-nav {
+			display: flex;
+
+			&__link {
+				margin-left: 30px;
+				font-size: 32px;
+				color: $black;
+				text-decoration: none;
+
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+
+		&-btn__menu {
+			display: none;
+		}
+	}
 }

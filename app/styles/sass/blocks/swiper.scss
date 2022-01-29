@@ -1,0 +1,28 @@
+.swiper {
+	position: relative;
+	margin-top: -110px;
+	padding-top: 100px;
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute;
+	}
+	.swiper-button-prev {
+		top: 0;
+		right: 120px;
+		width: 65px;
+		height: 75px;
+	}
+	.swiper-button-next {
+		top: 0;
+		right: 15px;
+		width: 85px;
+		height: 75px;
+		overflow: hidden;
+		img {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}

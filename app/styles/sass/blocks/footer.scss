@@ -2,5 +2,79 @@
 	max-width: $container-max-width - $grid-gutter-width;
 	margin: 0 auto;
 	padding: 0 math.div($grid-gutter-width, 2);
-	outline: 1px solid blue;
+	text-align: center;
+
+	&-row {
+		&--links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 40px;
+		}
+
+		&--bottom {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font-size: 32px;
+		font-weight: 400;
+	}
+
+	&__logo-link {
+		display: inline-block;
+		margin-bottom: 70px;
+	}
+
+	&__soc-link {
+		margin: 20px 13px;
+		color: $black;
+		font-size: 30px;
+		text-decoration: none;
+
+		&:hover {
+			color: $black;
+		}
+
+		img {
+			margin-right: 20px;
+		}
+	}
+
+	&__copyright {
+		margin-bottom: 55px;
+		font-family: $helveticafont;
+		font-size: 16px;
+	}
+
+	@include media-breakpoint-up(md) {
+		&-row {
+			&--bottom {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-bottom: 30px;
+			}
+		}
+		&__title {
+			font-size: 36px;
+		}
+
+		&__soc-link {
+			margin: 20px;
+
+			img {
+				margin-right: 15px;
+			}
+		}
+
+		&__copyright {
+			width: 50%;
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
 }
