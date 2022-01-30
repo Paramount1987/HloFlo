@@ -51,6 +51,8 @@
 	}
 
 	@include media-breakpoint-up(xl) {
+		margin-bottom: 200px;
+
 		&__pic {
 			width: 300px;
 		}

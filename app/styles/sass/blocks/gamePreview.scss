@@ -1,0 +1,46 @@
+.game-preview {
+	position: relative;
+	margin-bottom: 100px;
+	padding: 80px 25px 40px 25px;
+	background-color: $white;
+	border-radius: 30px;
+
+	&__pic {
+		position: absolute;
+		z-index: 1;
+		top: -80px;
+		right: 0;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 50px;
+		font-weight: 100;
+		line-height: 1;
+	}
+
+	&__descr {
+		margin-bottom: 50px;
+		font-family: $helveticafont;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__footer-txt {
+		font-family: $ttbackward;
+		font-size: 36px;
+		text-align: center;
+	}
+
+	&__btn-down {
+		margin: 0 auto;
+		background: none;
+		border: none;
+	}
+
+	@include media-breakpoint-up(md) {
+		&__title {
+			font-size: 70px;
+		}
+	}
+}

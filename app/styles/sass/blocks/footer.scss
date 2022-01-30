@@ -1,7 +1,7 @@
 .footer {
-	max-width: $container-max-width - $grid-gutter-width;
+	max-width: $container-max-width - $gutter;
 	margin: 0 auto;
-	padding: 0 math.div($grid-gutter-width, 2);
+	padding: 0 math.div($gutter, 2) 30px math.div($gutter, 2);
 	text-align: center;
 
 	&-row {

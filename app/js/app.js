@@ -36,3 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 });
+
+// Menu
+const btnMenu = document.querySelector('.js-btn-menu');
+const navMenu = document.querySelector('.js-nav');
+
+btnMenu.addEventListener('click', (e) => {
+	btnMenu.classList.toggle('show');
+	navMenu.classList.toggle('show');
+})

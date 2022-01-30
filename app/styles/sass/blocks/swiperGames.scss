@@ -1,3 +1,7 @@
+.swiper-game-wrapper {
+margin-bottom: 100px;
+}
+
 .slide-game {
 	padding: 55px 35px;
 	border-radius: 30px;
@@ -10,7 +14,8 @@
 	}
 
 	&__title-h5 {
-		font-size: 36;
+		margin-bottom: 0;
+		font-size: 36px;
 	}
 
 	&__descr {
@@ -19,6 +24,12 @@
 		font-size: 24px;
 		font-weight: 600;
 		font-family: $helveticafont;
+
+		&--sm {
+			margin-bottom: 20px;
+			font-size: 27px;
+			font-family: $helveticafont;
+		}
 	}
 
 	&__pic {
@@ -26,5 +37,14 @@
 		z-index: 1;
 		width: 100%;
 		margin: -100px 0 20px 0;
+	}
+
+	&__price {
+		margin-bottom: 20px;
+		font-size: 36px;
+	}
+
+	.btn {
+		margin-right: 10px;
 	}
 }
