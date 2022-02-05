@@ -1,0 +1,93 @@
+.game-gift {
+	padding: 0 45px;
+
+	&__title {
+		margin-bottom: 60px;
+		font-size: 38px;
+
+		&-sp {
+			font-size: 44px;
+			font-family: $ttbackward;
+		}
+	}
+}
+
+.game-gift-form {
+	margin-bottom: 90px;
+	padding: 0 45px;
+	text-align: center;
+
+	&__title {
+		font-size: 48px;
+	}
+
+	&__descr {
+		font-size: 24px;
+		font-family: $helveticafont;
+
+		&--sm {
+			font-size: 18px;
+			font-family: $helveticafont;
+		}
+	}
+
+	&__submit {
+		width: 100%;
+		max-width: 672px;
+		height: 107px;
+		margin-bottom: 70px;
+		border: none;
+		background: url("data:image/svg+xml,%3Csvg width='673' height='107' viewBox='0 0 673 107' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M623.052 3.59255C474.59 9.85397 325.676 3.32118 177.084 2.49408C135.004 1.77037 92.9285 0.941124 50.8571 0.00632507C31.6793 -0.193989 10.9403 12.0639 4.65088 30.6414C-11.1404 61.8387 15.6171 101.326 50.1153 100.803C240.74 103.116 431.777 111.051 622.291 104.396C628.899 104.445 635.451 103.19 641.575 100.703C647.698 98.2156 653.272 94.5443 657.979 89.8989C662.686 85.2534 666.434 79.7248 669.008 73.6285C671.582 67.5323 672.932 60.9878 672.981 54.3689C673.516 27.8111 650.081 2.48759 623.052 3.59255Z' fill='black'/%3E%3C/svg%3E%0A");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		font-size: 38px;
+		line-height: 1;
+		color: $white;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	&__input {
+		width: 100%;
+		max-width: 630px;
+		height: 97px;
+		border: none;
+		margin-bottom: 45px;
+		padding: 0 30px;
+		background: url("data:image/svg+xml,%3Csvg width='630' height='97' viewBox='0 0 630 97' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M47.0815 96.955C186.014 90.1348 325.466 95.1616 464.562 94.8927C503.954 95.2911 543.347 95.7696 582.739 96.3275C600.698 96.3753 620.028 84.8987 625.783 67.6361C640.348 38.6757 615.034 2.32725 582.739 3.0804C404.277 2.2615 225.386 -3.76967 47.1056 3.67814C34.6134 3.67814 22.6329 8.59027 13.7995 17.3339C4.96621 26.0775 0.00369369 37.9363 0.00369369 50.3017C-0.328435 74.8986 21.7853 98.1624 47.0815 96.955Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		font-family: $ttbackward;
+		font-size: 36px;
+		text-align: center;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.game-gift {
+		padding: 0 85px;
+	}
+
+	.game-gift-form {
+		max-width: 700px;
+		margin: 0 auto 90px auto;
+
+		&__descr {
+			margin-bottom: 40px;
+		}
+
+		&__submit {
+			font-size: 48px;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.game-gift {
+
+		&__title {
+			margin-bottom: 80px;
+			font-size: 54px;
+		}
+	}
+}

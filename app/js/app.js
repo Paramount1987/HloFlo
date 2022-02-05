@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+
+	const swiperGameGift = new Swiper(".swiper-game-gift", {
+		slidesPerView: "auto",
+		spaceBetween: 30,
+
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 });
 
 // Menu
