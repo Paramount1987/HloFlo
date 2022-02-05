@@ -1,7 +1,7 @@
 .header {
 	max-width: $container-max-width - $gutter;
 	margin: 0 auto;
-	padding: 50px math.div($gutter, 2) 100px math.div($gutter, 2);
+	padding: 50px 40px 100px 55px;
 
 	&-row {
 		display: flex;

@@ -21,9 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const swiperGame = new Swiper(".swiper-game", {
-		slidesPerView: 1,
-		spaceBetween: 30,
+		slidesPerView: "auto",
+		spaceBetween: 15,
 		loop: true,
+
+		breakpoints: {
+			992: {
+				spaceBetween: 30,
+			}
+		},
 
 		// autoplay: {
 		// 	delay: 2500,
