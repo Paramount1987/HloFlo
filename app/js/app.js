@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		spaceBetween: 30,
 		loop: true,
 
-		autoplay: {
-			delay: 2500,
+		//autoplay: {
+			// delay: 2500,
 			// disableOnInteraction: false,
-		},
+	//	},
 
 		// Navigation arrows
 		navigation: {

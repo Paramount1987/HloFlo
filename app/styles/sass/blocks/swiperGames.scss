@@ -14,7 +14,7 @@
 .slide-game {
 	position: relative;
 	width: 95%;
-	padding: 55px 35px;
+	padding: 55px 40px;
 	border-radius: 30px;
 
 	&-bottom {
@@ -115,14 +115,14 @@
 @include media-breakpoint-up(md) {
 	.slide-game {
 		max-width: 1010px;
-		padding: 55px 75px;
+		padding: 55px 50px;
 	}
 }
 
 @include media-breakpoint-up(lg) {
 	.slide-game {
-		width: 90%;
-		padding: 90px;
+		width: 93%;
+		padding: 90px 55px;
 	}
 }
 
