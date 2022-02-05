@@ -1,0 +1,212 @@
+.game-detail {
+	padding: 0 45px;
+
+	&__sup {
+		font-size: 26px;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-size: 50px;
+		font-weight: 100;
+		line-height: 1;
+	}
+
+	&__pic {
+		display: block;
+		max-width: 100%;
+		margin-bottom: 80px;
+	}
+	
+	&__price {
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 48px;
+		line-height: 1;
+	}
+
+	&-btns {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+
+	&__btn {
+		width: 390px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__descr {
+		margin-bottom: 30px;
+		font-size: 28px;
+		line-height: 1.3;
+
+		&--sm {
+			margin-bottom: 60px;
+			font-size: 24px;
+			font-family: $helveticafont;
+		}
+	}
+}
+
+.game-detail-section {
+	margin-bottom: 50px;
+	padding: 0 0 10px 0;
+	border-bottom: 2px solid $black-light;
+
+	&__title {
+		margin-bottom: 15px;
+		font-size: 32px;
+	}
+
+	&__descr {
+		font-size: 18px;
+		font-family: $helveticafont;
+	}
+}
+
+.game-detail-bottom {
+	padding: 0 45px;
+	text-align: center;
+
+	&__sup {
+		font-size: 26px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 48px;
+		line-height: 1;
+		font-weight: 100;
+	}
+
+	&__price {
+		margin-bottom: 20px;
+		font-size: 50px;
+		font-family: $ttbackward;
+		text-decoration: underline;
+	}
+
+	&-btns {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__btn {
+		width: 390px;
+		margin-bottom: 20px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.game-detail {
+		padding: 0 85px;
+
+		&__title {
+			position: relative;
+			z-index: 2;
+			font-size: 70px;
+		}
+
+		&__pic {
+			position: relative;
+			z-index: 1;
+			margin-top: -75px;
+		}
+
+		&__price {
+			margin-bottom: 45px;
+			text-align: left;
+		}
+
+		&-btns {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__btn {
+			width: auto;
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.game-detail-bottom {
+		padding: 0 85px;
+
+		&-btns {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__btn {
+			width: auto;
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.game-detail {
+		&__price {
+			margin-bottom: 0;
+		}
+
+		&-btns {
+			margin: 0 0 0 30px;
+		}
+
+		&__btn {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.game-detail {
+		&__sup {
+			font-size: 36px;
+		}
+
+		&__title {
+			font-size: 90px;
+		}
+
+		&__descr {
+			font-size: 36px;
+
+			&--sm {
+				font-size: 28px;
+			}
+		}
+	}
+
+	.game-detail-section {
+		display: flex;
+		margin-bottom: 50px;
+		padding-bottom: 20px;
+
+		&__title {
+			width: 35%;
+			font-size: 38px;
+		}
+
+		&__descr {
+			width: 65%;
+			padding-left: 30px;
+			font-size: 24px;
+		}
+	}
+}

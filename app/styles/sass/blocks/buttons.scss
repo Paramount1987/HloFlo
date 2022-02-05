@@ -8,10 +8,19 @@
 
 	&--white {
 		background-color: $white;
+		color: $black;
+		
+		&:hover {
+			color: $black;
+		}
 	}
 
 	&--black {
 		background-color: $black;
 		color: $white;
+
+		&:hover {
+			color: $white;
+		}
 	}
 }
