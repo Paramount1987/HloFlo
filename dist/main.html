@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="utf-8" />
 		<!-- <base href="/"> -->
@@ -17,12 +17,14 @@
 
 		<link rel="stylesheet" href="css/app.min.css" />
 	</head>
-	<body>
+	<body class="">
 		<div class="header">
 			<div class="header-row">
 				<div class="header-col">
 					<a href="main.html" class="header-logo__link">
 						<img src="images/dist/icons/headerLogo.svg" alt="" />
+						<img src="images/dist/icons/letterOright.svg" alt="" class="header-logo__link-img-1" />
+						<img src="images/dist/icons/letterOleft.svg" alt="" class="header-logo__link-img-2" />
 					</a>
 				</div>
 				<div class="header-col">
@@ -61,24 +63,25 @@
 			</p>
 		</div>
 		<div class="intro-col">
-			<img class="intro__pic" src="images/dist/woman.png" alt="" />
+			<img class="intro__pic" src="images/dist/woman.webp" alt="" />
 		</div>
 	</div>
 </div>
 
-	<h2 class="h2-title">Купи игру</h2>
+	<h2 class="h2-title swiper-title">Купи игру</h2>
 <div class="swiper-game-wrapper">
 	<div class="swiper swiper-game">
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 			<!-- Slides -->
-			<div class="swiper-slide slide-game bg-yellow-light">
+			<div class="swiper-slide slide-game deg-left bg-yellow-light">
 				<h4 class="slide-game__title">Поиск своего предназначения</h4>
 				<p class="slide-game__descr">
-					Ежедневные утренние практики помогут вам узнавать ответы на вопросы:
-					кто я? для чего я? каково мое предназначение? в чем моя уникальность?
+					Утренние практики по поиску призвания помогут вам каждый день
+					узнавать ответы на вопросы: кто я? для чего я?
+					каково мое предназначение? в чем моя уникальность?
 				</p>
-				<img class="slide-game__pic" src="images/dist/game1.png" alt="" />
+				<img class="slide-game__pic slide-game__pic--1" src="images/dist/game1.png" alt="" />
 				<h5 class="slide-game__title-h5">Игропрактика</h5>
 				<p class="slide-game__descr--sm">Продолжительность 15 дней</p>
 				<p class="slide-game__price">4 000₽</p>
@@ -87,10 +90,13 @@
 					<a href="#" class="btn btn--black">Купи</a>
 				</div>
 			</div>
-			<div class="swiper-slide slide-game bg-green-light">
+
+			<div class="swiper-slide slide-game deg-right bg-green-light">
+				<img class="slide-game__pic slide-game__pic--2" src="images/dist/game2.png" alt="" />
 				<p class="slide-game__descr">
-					Ежедневные утренние практики помогут вам узнавать ответы на вопросы:
-					кто я? для чего я? каково мое предназначение? в чем моя уникальность?
+					Утренние практики по поиску призвания помогут вам каждый день
+					узнавать ответы на вопросы: кто я? для чего я?
+					каково мое предназначение? в чем моя уникальность?
 				</p>
 
 				<h5 class="slide-game__title-h5">Игропрактика</h5>
@@ -101,8 +107,52 @@
 					<a href="#" class="btn btn--black">Купи</a>
 				</div>
 			</div>
-			<div class="swiper-slide slide-game">Slide 3</div>
-			<div class="swiper-slide slide-game">Slide 4</div>
+
+			<div class="swiper-slide slide-game deg-left slide-game--3 bg-brown-light-2">
+				<div class="slide-game-top">			
+					<img class="slide-game__pic slide-game__pic--3" src="images/dist/game3.png" alt="" />
+					<h4 class="slide-game__title">Работа со страхами</h4>
+					<p class="slide-game__descr">
+						Утренние практики по поиску призвания помогут вам каждый день
+						узнавать ответы на вопросы: кто я? для чего я?
+						каково мое предназначение? в чем моя уникальность?
+					</p>
+				</div>
+
+				<div class="slide-game-bottom">
+					<h5 class="slide-game__title-h5">Игропрактика</h5>
+					<p class="slide-game__descr--sm">Продолжительность 15 дней</p>
+					<p class="slide-game__price">4 000₽</p>
+					<div class="d-flex">
+						<a href="#" class="btn btn--white">Узнай больше</a>
+						<a href="#" class="btn btn--black">Купи</a>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="swiper-slide slide-game deg-right slide-game--4 bg-blue-light">
+				<div class="slide-game-top">			
+					<img class="slide-game__pic slide-game__pic--4" src="images/dist/game4.png" alt="" />
+					<h4 class="slide-game__title">Путеводитель по личной уникальности</h4>
+					<p class="slide-game__descr">
+						Утренние практики по поиску призвания помогут вам каждый день
+						узнавать ответы на вопросы: кто я? для чего я?
+						каково мое предназначение? в чем моя уникальность?
+					</p>
+				</div>
+
+				<div class="slide-game-bottom">
+					<h5 class="slide-game__title-h5">Игропрактика</h5>
+					<p class="slide-game__descr--sm">Продолжительность 15 дней</p>
+					<p class="slide-game__price">4 000₽</p>
+					<div class="d-flex">
+						<a href="#" class="btn btn--white">Узнай больше</a>
+						<a href="#" class="btn btn--black">Купи</a>
+					</div>
+				</div>
+
+			</div>
 		</div>
 
 		<!-- If we need navigation buttons -->
@@ -115,15 +165,20 @@
 	</div>
 </div>
 
-	<h2 class="h2-title">Отзывы</h2>
+	<h2 class="h2-title swiper-title">Отзывы</h2>
 <div class="swiper-review-wrapper">
 	<div class="swiper swiper-review">
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 			<!-- Slides -->
-			<div class="swiper-slide slide-review bg-green">Slide 1</div>
-			<div class="swiper-slide slide-review">
-				<p>
+			<div class="swiper-slide slide-review deg-left bg-green">
+				<div>
+					<p class="slide-review__txt--arch">мир перевернулся</p>
+					<p class="slide-review__txt--ttback">с ног на голову</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
 					Весь курс мне очень понравился. Некоторые задания реально можно быстро
 					сделать за несколько минут. А некоторые требовали гораздо больше
 					времени.
@@ -136,14 +191,82 @@
 					хорошо!
 				</p>
 			</div>
-			<div class="swiper-slide slide-review bg-yellow">Slide 3</div>
-			<div class="swiper-slide slide-review">Slide 4</div>
-			<div class="swiper-slide slide-review bg-red">Slide 5</div>
-			<div class="swiper-slide slide-review">Slide 6</div>
-			<div class="swiper-slide slide-review bg-brown">Slide 7</div>
-			<div class="swiper-slide slide-review">Slide 8</div>
-			<div class="swiper-slide slide-review bg-blue">Slide 9</div>
-			<div class="swiper-slide slide-review">Slide 10</div>
+			<div class="swiper-slide slide-review deg-left bg-yellow">
+				<div>
+					<p class="slide-review__txt--arch">меня очень драйвила</p>
+					<p class="slide-review__txt--ttback">и несло в мир идей</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
+					Сама мысль, что я прохожу такой крутой курс по проектированию внутренней карьеры (идеальная метафора!)
+					в канун дня рождения и юбилея (30 лет), <b>меня очень драйвила и несла в мир идей. Понравилось,
+					что разные техники в разные дни приводили к похожим результатам. Это было как-то суперубедительно.</b>
+				</p>
+			</div>
+			<div class="swiper-slide slide-review deg-left bg-red">
+				<div>
+					<p class="slide-review__txt--arch">некоторые инсайты поразили</p>
+					<p class="slide-review__txt--ttback">до глубины души и мурашек</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
+					Я решилась на прохождение курса и осталась очень довольна! Мне было очень интересно каждый день получать новое задание.
+					Как, оказалось, приятно регулярно встречаться с собой
+					 Я все образы письменно фиксировала в красивой тетради, которая с удовольствием закончилась,
+					 а я теперь чувствую острую необходимость в новой, ибо привычка разговора с собой по ходу дела закрепилась.
+					 <b>Процесс шел легко и с азартом, много было образов, некоторые инсайты поразили до глубины души и мурашек.</b>
+				</p>
+			</div>
+			<div class="swiper-slide slide-review deg-left bg-brown">
+				<div>
+					<p class="slide-review__txt--arch">ощущение радости</p>
+					<p class="slide-review__txt--ttback">и легкости</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
+					<b>Курс оставил ощущение полученного в подарок зеркала, в котором можно увидеть то,
+					на что обычно смотреть не хочется, и то, что, как часто кажется, слишком хорошо, чтобы быть про меня.</b>
+					А самое для меня главное, что он оставляет ощущение радости и легкости.
+					Причем радости, которая сохраняется как фон даже когда грустно, и легкости,
+					которая позволяет двигаться в сторону даже весьма непростых задач. Спасибо Вам большое.
+					Такой курс чудес, лайт-версия)
+				</p>
+			</div>
+			<div class="swiper-slide slide-review deg-left bg-blue">
+				<div>
+					<p class="slide-review__txt--arch">В процессе прохождения курса</p>
+					<p class="slide-review__txt--ttback">Я почувствовала себя Собой</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
+					Несколько раз я была готова сдаться и сейчас просто счастлива, что этот курс прошла до конца.
+					Я почувствовала, как не хватает игры в моей жизни. Поиграв, я поняла, что обычно отношусь
+					к жизни слишком серьезно, что есть другой способ жить, более легкий и непринужденный.
+					<b>Это был неожиданно сильный для меня опыт. Я увидела то, что не видела столько лет,
+					и еще в процессе появилось столько новых мыслей! Похоже, мне стало понятно,
+					куда можно дальше двигаться, чему учиться, что пробовать в работе»</b>
+				</p>
+			</div>
+			<div class="swiper-slide slide-review deg-left bg-green-light">
+				<div>
+					<p class="slide-review__txt--arch">В процессе прохождения курса  </p>
+					<p class="slide-review__txt--ttback">Я почувствовала себя Собой</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-review deg-right">
+				<p class="slide-review__txt">
+					Это такой вдохновительный шаг и удовольствие каждый день открывать о себе что-то новое,
+					что эмоции трудно передать. Если честно были сомнения, как оно сработает.
+					Вначале мне казалось, что мои ответы притянуты за уши. Но потом стало понятно,
+					что когда беру самые первые пришедшие в голову мысли, они и есть те самые правильные для меня.
+					<b>Уже под конец у меня просто не осталось сомнений в том, что мое, куда мне идти и что делать.
+					Побочный эффект: на этой волне я сделала то, что давно откладывала на работе и в своей личной жизни.</b>
+				</p>
+			</div>
 		</div>
 
 		<!-- If we need navigation buttons -->
@@ -156,10 +279,10 @@
 	</div>
 </div>
 
-	<div class="feedback">
+	<div class="feedback" id="feedbackId">
 	<h3 class="feedback__title">
 		Скоро новые игры.<br />
-		Оставте почту и я пришлю вам приглашение.
+		Оставьте почту и я пришлю вам приглашение.
 	</h3>
 
 	<form class="feedback-form">
@@ -167,6 +290,7 @@
 			<div class="feedback-form-control">
 				<input
 					class="feedback-form__input"
+					required
 					type="email"
 					placeholder="Твоя эл. почта"
 				/>
