@@ -1,5 +1,5 @@
 .swiper-review-wrapper {
-	margin: 0 math.div(-$gutter, 2) 100px;
+	margin: 0 -15px 100px;
 }
 
 .swiper-review {
@@ -16,6 +16,22 @@
 	border-radius: 30px;
 	font-size: 16px;
 	font-family: $helveticafont;
+	transition: transform .4s;
+
+	&.deg-right {
+		transform: rotate(5deg);
+
+		&:hover {
+			transform: rotate(0);
+		}
+	}
+	&.deg-left {
+		transform: rotate(-5deg);
+
+		&:hover {
+			transform: rotate(0);
+		}
+	}
 }
 
 .slide-review__txt {
@@ -32,5 +48,11 @@
 		font-size: 35px;
 		font-family: $ttbackward;
 		text-align: center;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.swiper-review {
+		padding: 100px 20px 0 20px;
 	}
 }

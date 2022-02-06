@@ -27,7 +27,31 @@
 	}
 
 	&-logo__link {
+		position: relative;
 		display: inline-block;
+
+		&-img-1 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transition: transform 1.5s ease-in-out;
+		}
+
+		&-img-2 {
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+			transition: transform 2s ease-in-out;
+		}
+
+		&:hover {
+			.header-logo__link-img-1 {
+				transform: rotate(360deg);
+			}
+			.header-logo__link-img-2 {
+				transform: rotate(-360deg);
+			}
+		}
 	}
 
 	&-btn__menu {

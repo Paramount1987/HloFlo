@@ -5,13 +5,14 @@ import Swiper from "swiper/bundle";
 document.addEventListener("DOMContentLoaded", () => {
 	const swiperReview = new Swiper(".swiper-review", {
 		slidesPerView: "auto",
-		spaceBetween: 30,
+		spaceBetween: 20,
 		loop: true,
 
-		//autoplay: {
-			// delay: 2500,
+		autoplay: {
+			delay: 3000,
+			pauseOnMouseEnter: true,
 			// disableOnInteraction: false,
-	//	},
+		},
 
 		// Navigation arrows
 		navigation: {

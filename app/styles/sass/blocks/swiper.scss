@@ -6,15 +6,20 @@
 	.swiper-button-prev,
 	.swiper-button-next {
 		position: absolute;
+		transition: transform .2s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 	.swiper-button-prev {
-		top: 0;
+		top: 4px;
 		right: 120px;
 		width: 65px;
 		height: 75px;
 	}
 	.swiper-button-next {
-		top: 0;
+		top: 4px;
 		right: 15px;
 		width: 85px;
 		height: 75px;
