@@ -74,3 +74,28 @@
 		}
 	}
 }
+
+.feedback-form-success {
+	width: 100%;
+	max-width: 630px;
+	margin: 0 auto;
+	text-align: center;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 97px;
+		margin: 0 0 40px 0;
+		background: url("data:image/svg+xml,%3Csvg width='630' height='97' viewBox='0 0 630 97' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M47.0815 96.955C186.014 90.1348 325.466 95.1616 464.562 94.8927C503.954 95.2911 543.347 95.7696 582.739 96.3275C600.698 96.3753 620.028 84.8987 625.783 67.6361C640.348 38.6757 615.034 2.32725 582.739 3.0804C404.277 2.2615 225.386 -3.76967 47.1056 3.67814C34.6134 3.67814 22.6329 8.59027 13.7995 17.3339C4.96621 26.0775 0.00369369 37.9363 0.00369369 50.3017C-0.328435 74.8986 21.7853 98.1624 47.0815 96.955Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		font-family: $ttbackward;
+		font-size: 36px;
+		line-height: 1;
+	}
+
+	&__descr {
+		font-size: 32px;
+	}
+}
