@@ -1,6 +1,12 @@
 .swiper-game-gift {
 	margin: 0 -15px 75px -15px;
-	padding: 100px 15px 0 15px;
+	padding: 100px 15px 20px 15px;
+
+	.swiper-slide {
+		position: relative;
+		width: 445px;
+		height: 250px;
+	}
 }
 
 .slide-game-gift {
@@ -12,6 +18,16 @@
 	height: 250px;
 	padding: 25px 30px;
 	border-radius: 30px;
+	cursor: pointer;
+	transition: transform .5s;
+
+	&.deg-right {
+		transform: rotate(4.4deg);
+	}
+
+	&.deg-left {
+		transform: rotate(-4.4deg);
+	}
 
 	&-bottom {
 		display: flex;
@@ -33,13 +49,31 @@
 	}
 
 	&__link {
+		position: absolute;
+		z-index: 3;
+		right: 20px;
+		bottom: 35px;
 		font-size: 18px;
 		color: $black;
 		font-family: $helveticafont;
 		text-decoration: none;
+		transition: transform .5s;
+
+		&.deg-left {
+			transform: rotate(-4.4deg);
+		}
+		&.deg-right {
+			transform: rotate(4.4deg);
+			bottom: 20px;
+		}
 
 		&:hover {
 			color: $black;
+			transform: rotate(0);
+
+			& ~ .slide-game-gift {
+				transform: rotate(0);
+			}
 		}
 	}
 
@@ -54,12 +88,20 @@
 			z-index: 2;
 			top: 0;
 			right: 0;
-			width: 40px;
-			height: 40px;
+			width: 100%;
+			height: 100%;
 		  opacity: 0;
 			cursor: pointer;
 
-			&:checked + .slide-game-gift-checkbox__label {
+			&:hover,
+			&:checked {
+				& ~ .slide-game-gift,
+				& ~ .slide-game-gift__link {
+					transform: rotate(0);
+				}
+			}
+
+			&:checked ~ .slide-game-gift .slide-game-gift-checkbox__label {
 				transform: scale(1.5);
 
 				&:after {
@@ -97,7 +139,7 @@
 
 @include media-breakpoint-up(xl) {
  .swiper-game-gift {
-	 padding-top: 0;
+	 padding-top: 20px;
 
 	 .swiper-button-prev,
 	 .swiper-button-next {
@@ -109,8 +151,8 @@
 		 justify-content: center;
 	 }
 
-	 .slide-game-gift {
-		 margin-bottom: 30px;
+	 .swiper-slide {
+		 margin-bottom: 40px;
 	 }
  }
 }

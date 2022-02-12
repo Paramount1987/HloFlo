@@ -16,10 +16,11 @@ $blue-light: #c3d8f6
 
 // SIZES
 $container-max-width: 1200px
+$container-min-width: 580px
 
 $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$textcolor: #000 // Text Color
 $lineheight: 1.45 // Document Line Height
 $userfont: Archaism, sans-serif // User Font Family
 $helveticafont: "Helvetica Neue", Helvetica, sans-serif
@@ -81,5 +82,6 @@ body
 
 .wrapper
 	max-width: $container-max-width - $grid-gutter-width
+	min-width: $container-min-width
 	margin: 0 auto
 	padding: 0 math.div($grid-gutter-width, 2)

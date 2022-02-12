@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		slidesPerView: "auto",
 		spaceBetween: 30,
 
+		simulateTouch: false,
+
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",

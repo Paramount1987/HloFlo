@@ -1,5 +1,6 @@
 .header {
 	max-width: $container-max-width - $gutter;
+	min-width: $container-min-width;
 	margin: 0 auto;
 	padding: 50px 40px 100px 55px;
 

@@ -22,6 +22,10 @@
 			background-repeat: no-repeat;
 			font-family: $ttbackward;
 			font-size: 22px;
+
+			&::placeholder {
+				color: #9f9f9f;
+			}
 		}
 
 		&__submit {
@@ -35,6 +39,11 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			border: none;
+			transition: transform .5s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 
 		&__descr {
