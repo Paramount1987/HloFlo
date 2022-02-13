@@ -54,6 +54,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+
+	// card
+	const cardIntro = document.getElementById('card--intro');
+	const cardRuler = document.getElementById('card--ruler');
+	const cardHero = document.getElementById('card--hero');
+	const cardSearcher = document.getElementById('card--searcher');
+	const cardRebel = document.getElementById('card--rebel');
+
+	setTimeout(() => {
+		cardIntro.classList.add('open');
+	}, 300)
+
+	setTimeout(() => {
+		cardRuler.classList.add('open');
+		cardHero.classList.add('open');
+		cardSearcher.classList.add('open');
+		cardRebel.classList.add('open');
+	}, 1100)
+
 });
 
 // Menu
