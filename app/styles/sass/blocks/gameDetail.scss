@@ -1,4 +1,5 @@
 .game-detail {
+	margin-bottom: 100px;
 	padding: 0 45px;
 
 	&__sup {
@@ -8,12 +9,16 @@
 	}
 
 	&__title {
+		position: relative;
+		z-index: 2;
 		font-size: 50px;
 		font-weight: 100;
 		line-height: 1;
 	}
 
 	&__pic {
+		position: relative;
+		z-index: 2;
 		display: block;
 		max-width: 100%;
 		margin-bottom: 80px;
@@ -27,6 +32,8 @@
 	}
 
 	&-btns {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -76,6 +83,7 @@
 }
 
 .game-detail-bottom {
+	margin-bottom: 100px;
 	padding: 0 45px;
 	text-align: center;
 
@@ -150,6 +158,10 @@
 				margin-right: 0;
 			}
 		}
+
+		.slide-game__pic-wrap {
+			margin-bottom: 50px;
+		}
 	}
 
 	.game-detail-bottom {
@@ -204,6 +216,14 @@
 			&--sm {
 				font-size: 28px;
 			}
+		}
+
+		.slide-game__pic-wrap {
+			margin-bottom: 120px;
+		}
+
+		.slide-game__pic--1-bg {
+			width: 700px;
 		}
 	}
 
