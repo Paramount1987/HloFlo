@@ -48,7 +48,7 @@
 
 
 <div class="cards-wrapper">
-	<div class="cards-list">
+	<div id="cards-list" class="cards-list" data-active="">
 		<div class="card-wrap card-wrap--intro">
 			<div id="card--intro" class="card">
 				<div class="card__front">
@@ -58,10 +58,10 @@
 				</div>
 				<div class="card__back">
 					<div class="card__title">Кто ты?</div>
-					<div class="d-flex justify-content-center flex-wrap">
-						<div class="card__link">Делатель</div>
-						<div class="card__link">Радователь</div>
-						<div class="card__link">Явитель</div>
+					<div id="js-cards-link" class="d-flex justify-content-center flex-wrap">
+						<div id="link-doer" class="card__link js-card-link">Делатель</div>
+						<div id="link-joyer" class="card__link js-card-link">Радователь</div>
+						<div id="link-camer" class="card__link js-card-link">Явитель</div>
 					</div>
 				</div>
 			</div>
@@ -70,6 +70,13 @@
 			<div id="card--rebel" class="card">
 				<div class="card__front">
 					<div class="card__title">Бунтарь</div>
+					<img src="images/dist/rebel.png" class="card__avatar" width="190" height="190" alt="">
+				</div>
+				<div class="card__back">
+					<div class="card__title-back">
+						Бунтарь
+					</div>
+					<p class="card__descr">Нарушение правил, революция, вызов, шок, эпатаж.</p>
 				</div>
 			</div>
 		</div>
@@ -78,6 +85,13 @@
 			<div id="card--searcher" class="card">
 				<div class="card__front">
 					<div class="card__title">Искатель</div>
+					<img src="images/dist/searcher.png" class="card__avatar" width="210" height="210.5" alt="">
+				</div>
+				<div class="card__back">
+					<div class="card__title-back">
+						Искатель
+					</div>
+					<p class="card__descr">Поиск новых путей, независимость</p>
 				</div>
 			</div>
 		</div>
@@ -86,6 +100,13 @@
 			<div id="card--hero" class="card">
 				<div class="card__front">
 					<div class="card__title">Герой</div>
+					<img src="images/dist/hero.png" class="card__avatar" width="207" height="206" alt="">
+				</div>
+				<div class="card__back">
+					<div class="card__title-back">
+						Герой
+					</div>
+					<p class="card__descr">Преодоление препятствий, мужество, нести спасение</p>
 				</div>
 			</div>
 		</div>
@@ -94,6 +115,13 @@
 			<div id="card--ruler" class="card">
 				<div class="card__front">
 					<div class="card__title">Правитель</div>
+					<img src="images/dist/ruler.png" class="card__avatar" width="205" height="205" alt="">
+				</div>
+				<div class="card__back">
+					<div class="card__title-back">
+						Правитель
+					</div>
+					<p class="card__descr">Управление и статус, создание структур, придание стабильности, власть, ответственность и контроль</p>
 				</div>
 			</div>
 		</div>
