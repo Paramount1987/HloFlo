@@ -56,22 +56,40 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// card
+	const cardsList = document.getElementById('cards-list')
 	const cardIntro = document.getElementById('card--intro');
 	const cardRuler = document.getElementById('card--ruler');
 	const cardHero = document.getElementById('card--hero');
 	const cardSearcher = document.getElementById('card--searcher');
 	const cardRebel = document.getElementById('card--rebel');
 
-	setTimeout(() => {
-		cardIntro.classList.add('open');
-	}, 300)
+	const cardsLinkParent = document.getElementById('js-cards-link');
+	const cardsLink = document.getElementsByClassName('js-card-link')
 
-	setTimeout(() => {
-		cardRuler.classList.add('open');
-		cardHero.classList.add('open');
-		cardSearcher.classList.add('open');
-		cardRebel.classList.add('open');
-	}, 1100)
+	if (cardsLinkParent) {
+		setTimeout(() => {
+			cardIntro.classList.add('open');
+		}, 300);
+
+		setTimeout(() => {
+			cardRuler.classList.add('trnsl');
+			cardHero.classList.add('trnsl');
+			cardSearcher.classList.add('trnsl');
+			cardRebel.classList.add('trnsl');
+		}, 1100);
+
+		cardsLinkParent.addEventListener('click', function (ev) {
+			const target = ev.target
+			const idLink = target.id
+			
+			Array.prototype.forEach.call(cardsLink, function (item) {
+				item.classList.remove('active');
+			});
+	
+			target.classList.add('active');
+			cardsList.dataset.active = idLink;
+		});
+	}
 
 });
 

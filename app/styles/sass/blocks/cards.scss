@@ -5,10 +5,6 @@
 		height: 270px;
 		margin: 50px auto 150px auto;
 	}
-
-	&-list {
-
-	}
 }
 
 .card {
@@ -26,17 +22,22 @@
 
 	&-wrap {
 		position: relative;
-		perspective: 400px;
+		perspective: 1000px;
 		perspective-origin: 50% 50%;
 
 		&--intro {
 			z-index: 10;
 
 			.card {
+				width: 185px;
 				transition: transform 1.1s;
 					&.open {
 						transform: rotateY(180deg);
 					}
+			}
+
+			.card__title {
+				margin-bottom: 30px;
 			}
 
 			.card__front {
@@ -44,13 +45,16 @@
 				background-color: #7d356b;
 				color: $white;
 			}
+			.card__back {
+				background-color: $white;
+			}
 		}
 
 		&--ruler {
 			right: -10px;
 			top: 5px;
 
-			.card.open {
+			.card.trnsl {
 				transform: translate(20px, 5px) rotate(7.2deg);
 			}
 			.card__front {
@@ -62,7 +66,7 @@
 			right: -15px;
 			top: -3px;
 
-			.card.open {
+			.card.trnsl {
 				transform: translate(35px, -35px);
 			}
 
@@ -76,8 +80,8 @@
 			right: 20px;
 			transform: rotate(-4deg);
 
-			.card.open {
-				transform: rotate(-7.5deg) translate(-35px, -40px);
+			.card.trnsl {
+				transform: rotate(-6deg) translate(-30px, -30px);
 			}
 
 			.card__front {
@@ -90,8 +94,8 @@
 			right: 10px;
 			transform: rotate(3.5deg);
 
-			.card.open {
-				transform: translate(-20px, 10px) rotate(3.5deg);
+			.card.trnsl {
+				transform: translate(-15px, 5px) rotate(3.5deg);
 			}
 
 			.card__front {
@@ -106,9 +110,9 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		padding: 25px 15px;
+		padding: 20px 0;
 		border-radius: 25px;
-		transform: translateZ(1px);
+		transform: translateZ(0);
 	}
 
 	&__back {
@@ -117,16 +121,38 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		padding: 25px 15px;
+		display: flex;
+		flex-direction: column;
+		padding: 20px 15px;
 		border-radius: 25px;
-		background-color: $white;
-		transform: translateZ(0) rotateY(180deg);
+		background-color: #e5e5e5;
+		transform: translateZ(-1px) rotateY(180deg);
 	}
 
 	&__title {
-		margin-bottom: 30px;
+		margin-bottom: 0;
+		padding: 0 15px;
 		font-size: 33px;
 		font-weight: 100;
+
+		&-back {
+			font-size: 22px;
+			font-weight: 100;
+		}
+	}
+
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-grow: 1;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-family: $helveticafont;
+	}
+
+	&__avatar {
+		display: block;
 	}
 
 	&__link {
@@ -135,10 +161,47 @@
 		font-size: 22px;
 		cursor: pointer;
 
-		&:hover {
+		&:hover,
+		&.active {
 			background-image: url("data:image/svg+xml,%3Csvg width='130' height='22' viewBox='0 0 130 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.8317 21.0066C38.2511 19.3305 66.8008 20.0759 95.2668 19.7391C103.329 19.7408 111.392 19.7589 119.455 19.7932C123.131 19.7665 127.064 17.3805 128.206 13.8388C131.129 7.8871 125.874 0.505403 119.267 0.724837C82.7418 0.918894 46.1188 0.0479493 9.64783 1.93212C7.09124 1.95742 4.64931 2.98619 2.85922 4.79208C1.06914 6.59798 0.0775438 9.03308 0.102573 11.5617C0.0843881 16.5922 4.65716 21.3047 9.8317 21.0066Z' fill='%23E4D3C5'/%3E%3C/svg%3E%0A");
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
+		}
+	}
+}
+
+.cards-list {
+	&[data-active="link-doer"] {
+		.card-wrap--ruler .card {
+			transform: translate(220px, -95px) rotate(-5deg);
+
+			&:hover {
+				transform: translate(220px, -95px) rotateY(180deg);
+			}
+		}
+
+		.card-wrap--hero .card {
+			transform: translate(430px, 35px) rotate(14deg);
+
+			&:hover {
+				transform: translate(430px, 35px) rotateY(180deg);
+			}
+		}
+
+		.card-wrap--searcher .card {
+			transform: translate(-210px, -90px) rotate(14deg);
+
+			&:hover {
+				transform: translate(-210px, -90px) rotateY(180deg);
+			}
+		}
+
+		.card-wrap--rebel .card {
+			transform: translate(-410px, -30px) rotate(-11deg);
+
+			&:hover {
+				transform: translate(-410px, -30px) rotateY(180deg);
+			}
 		}
 	}
 }
