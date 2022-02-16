@@ -1,9 +1,19 @@
 .cards {
 	&-wrapper {
 		position: relative;
-		width: 200px;
+		width: 100%;
 		height: 270px;
-		margin: 50px auto 150px auto;
+		margin: 20px 0 150px 0;
+
+		@include media-breakpoint-up(md) {
+			position: relative;
+			width: 200px;
+			height: 270px;
+			margin: 70px auto 200px auto;
+		}
+		@include media-breakpoint-up(xl) {
+			margin: 50px auto 150px auto;
+		}
 	}
 }
 
@@ -31,6 +41,11 @@
 			.card {
 				width: 185px;
 				transition: transform 1.1s;
+				@include media-breakpoint-down(md) {
+					right: auto;
+					left: 50%;
+					margin-left: -92px;
+				}
 					&.open {
 						transform: rotateY(180deg);
 					}
@@ -50,7 +65,9 @@
 			}
 		}
 
-		&--ruler {
+		&--ruler,
+		&--droll,
+		&--curator {
 			right: -10px;
 			top: 5px;
 
@@ -62,7 +79,21 @@
 			}
 		}
 
-		&--hero {
+		&--droll {
+			.card__front {
+				background-color: #ffcf59;
+			}
+		}
+
+		&--curator {
+			.card__front {
+				background-color: #e4d3c5;
+			}
+		}
+
+		&--hero,
+		&--lover,
+		&--wizard {
 			right: -15px;
 			top: -3px;
 
@@ -75,7 +106,21 @@
 			}
 		}
 
-		&--searcher {
+		&--lover {
+			.card__front {
+				background-color: #f5a2a2;
+			}
+		}
+
+		&--wizard {
+			.card__front {
+				background-color: #c3d8f6;
+			}
+		}
+
+		&--searcher,
+		&--creator,
+		&--sage {
 			top: -5px;
 			right: 20px;
 			transform: rotate(-4deg);
@@ -89,7 +134,21 @@
 			}
 		}
 
-		&--rebel {
+		&--creator {
+			.card__front {
+				background-color: #c3d8f6;
+			}
+		}
+
+		&--sage {
+			.card__front {
+				background-color: #bf96b5;
+			}
+		}
+
+		&--rebel,
+		&--nice,
+		&--simple {
 			top: 7px;
 			right: 10px;
 			transform: rotate(3.5deg);
@@ -100,6 +159,18 @@
 
 			.card__front {
 				background-color: #81a3e0;
+			}
+		}
+
+		&--nice {
+			.card__front {
+				background-color: #d3e4cb;
+			}
+		}
+
+		&--simple {
+			.card__front {
+				background-color: #d3e4cb;
 			}
 		}
 	}
@@ -134,10 +205,12 @@
 		padding: 0 15px;
 		font-size: 33px;
 		font-weight: 100;
+		line-height: 1;
 
 		&-back {
 			font-size: 22px;
 			font-weight: 100;
+			line-height: 1;
 		}
 	}
 
@@ -170,37 +243,246 @@
 	}
 }
 
+.cards-list__item {
+	@include media-breakpoint-down(md) {
+		position: absolute;
+		left: 0;
+		display: flex;
+		width: 100%;
+		height: 370px;
+		padding: 50px 20px 100px 20px;
+		overflow-x: scroll;
+		pointer-events: none;
+
+		.card {
+			position: relative;
+		}
+	}
+}
+
 .cards-list {
-	&[data-active="link-doer"] {
-		.card-wrap--ruler .card {
-			transform: translate(220px, -95px) rotate(-5deg);
-
-			&:hover {
-				transform: translate(220px, -95px) rotateY(180deg);
+	@include media-breakpoint-down(md) {
+		&[data-active="link-doer"] {
+			.cards-list__item[data-type="doer"] {
+				pointer-events: auto;
+				.card-wrap {
+					z-index: 15;
+				}
 			}
 		}
-
-		.card-wrap--hero .card {
-			transform: translate(430px, 35px) rotate(14deg);
-
-			&:hover {
-				transform: translate(430px, 35px) rotateY(180deg);
+		&[data-active="link-joyer"] {
+			.cards-list__item[data-type="joyer"] {
+				pointer-events: auto;
+				.card-wrap {
+					z-index: 15;
+				}
 			}
 		}
-
-		.card-wrap--searcher .card {
-			transform: translate(-210px, -90px) rotate(14deg);
-
-			&:hover {
-				transform: translate(-210px, -90px) rotateY(180deg);
+		&[data-active="link-camer"] {
+			.cards-list__item[data-type="camer"] {
+				pointer-events: auto;
+				.card-wrap {
+					z-index: 15;
+				}
 			}
 		}
+	}
+	@include media-breakpoint-up(md) {
+		&[data-active="link-doer"] {
+			.card-wrap--ruler .card {
+				transform: translate(220px, -150px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(220px, -150px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--hero .card {
+				transform: translate(230px, 145px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(230px, 145px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--searcher .card {
+				transform: translate(-200px, -140px) rotate(8deg);
+	
+				&:hover {
+					transform: translate(-200px, -140px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--rebel .card {
+				transform: translate(-200px, 160px) rotate(-11deg);
+	
+				&:hover {
+					transform: translate(-200px, 160px) rotateY(180deg);
+				}
+			}
+		}
+		&[data-active="link-joyer"] {
+			.card-wrap--droll .card {
+				transform: translate(240px, -150px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(240px, -150px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--lover .card {
+				transform: translate(230px, 145px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(230px, 145px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--creator .card {
+				transform: translate(-240px, -140px) rotate(8deg);
+	
+				&:hover {
+					transform: translate(-240px, -140px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--nice .card {
+				transform: translate(-220px, 160px) rotate(-11deg);
+	
+				&:hover {
+					transform: translate(-220px, 160px) rotateY(180deg);
+				}
+			}
+		}
+		&[data-active="link-camer"] {
+			.card-wrap--curator .card {
+				transform: translate(240px, -150px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(240px, -150px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--wizard .card {
+				transform: translate(230px, 145px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(230px, 145px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--sage .card {
+				transform: translate(-240px, -140px) rotate(8deg);
+	
+				&:hover {
+					transform: translate(-240px, -140px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--simple .card {
+				transform: translate(-220px, 160px) rotate(-11deg);
+	
+				&:hover {
+					transform: translate(-220px, 160px) rotateY(180deg);
+				}
+			}
+		}
+	}
 
-		.card-wrap--rebel .card {
-			transform: translate(-410px, -30px) rotate(-11deg);
-
-			&:hover {
-				transform: translate(-410px, -30px) rotateY(180deg);
+	@include media-breakpoint-up(xl) {
+		&[data-active="link-camer"] {
+			.card-wrap--curator .card {
+				transform: translate(230px, -95px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(230px, -95px) rotateY(180deg);
+				}
+			}
+			.card-wrap--wizard .card {
+				transform: translate(430px, 35px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(430px, 35px) rotateY(180deg);
+				}
+			}
+			.card-wrap--sage .card {
+				transform: translate(-220px, -80px) rotate(12deg);
+	
+				&:hover {
+					transform: translate(-220px, -80px) rotateY(180deg);
+				}
+			}
+			.card-wrap--simple .card {
+				transform: translate(-415px, -30px) rotate(-9deg);
+	
+				&:hover {
+					transform: translate(-415px, -30px) rotateY(180deg);
+				}
+			}
+		}
+	
+		&[data-active="link-joyer"] {
+			.card-wrap--droll .card {
+				transform: translate(230px, -95px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(230px, -95px) rotateY(180deg);
+				}
+			}
+			.card-wrap--lover .card {
+				transform: translate(430px, 35px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(430px, 35px) rotateY(180deg);
+				}
+			}
+			.card-wrap--creator .card {
+				transform: translate(-220px, -80px) rotate(12deg);
+	
+				&:hover {
+					transform: translate(-220px, -80px) rotateY(180deg);
+				}
+			}
+			.card-wrap--nice .card {
+				transform: translate(-415px, -30px) rotate(-9deg);
+	
+				&:hover {
+					transform: translate(-415px, -30px) rotateY(180deg);
+				}
+			}
+		}
+	
+		&[data-active="link-doer"] {
+			.card-wrap--ruler .card {
+				transform: translate(220px, -95px) rotate(-5deg);
+	
+				&:hover {
+					transform: translate(220px, -95px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--hero .card {
+				transform: translate(430px, 35px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(430px, 35px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--searcher .card {
+				transform: translate(-210px, -90px) rotate(14deg);
+	
+				&:hover {
+					transform: translate(-210px, -90px) rotateY(180deg);
+				}
+			}
+	
+			.card-wrap--rebel .card {
+				transform: translate(-410px, -30px) rotate(-11deg);
+	
+				&:hover {
+					transform: translate(-410px, -30px) rotateY(180deg);
+				}
 			}
 		}
 	}
