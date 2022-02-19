@@ -1,6 +1,5 @@
 .header {
 	max-width: $container-max-width - $gutter;
-	min-width: $container-min-width;
 	margin: 0 auto;
 	padding: 50px 40px 100px 55px;
 
@@ -68,6 +67,25 @@
 			& + span {
 				width: 38px;
 				margin-top: 10px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: 30px 15px 50px 15px;
+
+		&-logo__link {
+			&-img-0 {
+				width: 127px;
+			}
+
+			&-img-1,
+			&-img-2 {
+				width: 40px;
+			}
+
+			&-img-2 {
+				bottom: 5px;
 			}
 		}
 	}

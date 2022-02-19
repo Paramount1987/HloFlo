@@ -1,6 +1,5 @@
 .footer {
 	max-width: $container-max-width - $gutter;
-	min-width: $container-min-width;
 	margin: 0 auto;
 	padding: 0 math.div($gutter, 2) 30px math.div($gutter, 2);
 	text-align: center;
@@ -28,6 +27,10 @@
 	&__logo-link {
 		display: inline-block;
 		margin-bottom: 70px;
+
+		img {
+			width: 368px;
+		}
 	}
 
 	&__soc-link {
@@ -41,6 +44,7 @@
 		}
 
 		img {
+			width: 40px;
 			margin-right: 20px;
 		}
 	}
@@ -49,6 +53,31 @@
 		margin-bottom: 55px;
 		font-family: $helveticafont;
 		font-size: 16px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		&__logo-link {
+			margin-bottom: 20px;
+
+			img {
+				width: 230px;
+			}
+		}
+		&__title {
+			font-size: 29px;
+		}
+		&__copyright {
+			font-size: 12px;
+		}
+		&__soc-link {
+			margin: 10px 13px;
+			font-size: 24px;
+
+			img {
+				width: 25px;
+				margin-right: 10px;
+			}
+		}
 	}
 
 	@include media-breakpoint-up(md) {

@@ -53,6 +53,27 @@
 		}
 	}
 
+	@include media-breakpoint-down(sm) {
+		&__title {
+			font-size: 22px;
+		}
+		&-form {
+			&__input {
+				width: 280px;
+				height: 42px;
+				font-size: 14px;
+			}
+			&__submit {
+				width: 27px;
+				height: 27px;
+				margin-top: -12px;
+			}
+			&__descr {
+				font-size: 12px;
+			}
+		}
+	}
+
 	@include media-breakpoint-up(md) {
 		&__title {
 			font-size: 48px;

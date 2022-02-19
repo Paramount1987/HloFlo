@@ -175,7 +175,7 @@
 		&--4 {
 			position: absolute;
 			top: 180px;
-			right: -20px;
+			right: -18px;
 			width: 270px;
 			mix-blend-mode: darken;
 
@@ -202,6 +202,56 @@
 
 		&:hover {
 			transform: scale(1.05) translate3d(0,0,0);
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.swiper-game-wrapper {
+		margin-bottom: 40px;
+	}
+	.swiper-title {
+		padding-left: 15px;
+	}
+	.slide-game {
+		padding: 20px;
+
+		&__title {
+			font-size: 28px;
+
+			&-h5 {
+				font-size: 24px;
+			}
+		}
+		&__descr {
+			font-size: 14px;
+
+			&--sm {
+				font-size: 16px;
+			}
+		}
+		&__price {
+			font-size: 24px;
+		}
+		&__pic {
+			&--1 {
+				width: 220px;
+				&-bg {
+					width: 250px;
+				}
+			}
+			&--3 {
+				width: 135px;
+				&-bg {
+					width: 230px;
+				}
+			}
+			&--4 {
+				width: 180px;
+				&-bg {
+					width: 210px;
+				}
+			}
 		}
 	}
 }

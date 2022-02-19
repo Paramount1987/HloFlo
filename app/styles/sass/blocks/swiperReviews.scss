@@ -51,6 +51,30 @@
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	.swiper-review-wrapper {
+		margin-bottom: 30px;
+	}
+	.swiper-review {
+		height: 430px;
+	}
+	.slide-review {
+		padding: 20px;
+		width: 200px;
+		height: 280px;
+		font-size: 9px;
+	}
+	.slide-review__txt {
+		&--arch {
+			font-size: 23px;
+		}
+
+		&--ttback {
+			font-size: 21px;
+		}
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.swiper-review {
 		padding: 100px 20px 0 20px;
