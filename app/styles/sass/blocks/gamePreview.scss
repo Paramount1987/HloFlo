@@ -11,6 +11,7 @@
 		z-index: 1;
 		top: -80px;
 		right: 0;
+		width: 329px;
 	}
 
 	&__title {
@@ -38,9 +39,35 @@
 		background: none;
 		border: none;
 		transition: transform .5s;
+		img {
+			width: 90px;
+		}
 
 		&:hover {
 			transform: scale(1.1);
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: 80px 20px 30px 20px;
+
+		&__pic {
+			top: -40px;
+			width: 220px;
+		}
+		&__title {
+			font-size: 36px;
+		}
+		&__descr {
+			font-size: 18px;
+		}
+		&__footer-txt {
+			font-size: 24px;
+		}
+		&__btn-down {
+			img {
+				width: 50px;
+			}
 		}
 	}
 

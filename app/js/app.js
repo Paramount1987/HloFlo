@@ -45,9 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const swiperGameGift = new Swiper(".swiper-game-gift", {
 		slidesPerView: "auto",
-		spaceBetween: 30,
+		spaceBetween: 15,
 
 		simulateTouch: false,
+
+		breakpoints: {
+			576: {
+				spaceBetween: 30,
+			}
+		},
 
 		navigation: {
 			nextEl: ".swiper-button-next",

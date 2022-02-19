@@ -124,6 +124,62 @@
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	.game-detail {
+		padding: 0;
+
+		&__sup {
+			font-size: 24px;
+		}
+
+		&__title {
+			font-size: 28px;
+		}
+
+		&__price {
+			font-size: 24px;
+		}
+
+		&-btns {
+			margin-bottom: 30px;
+		}
+
+		&__btn {
+			width: 220px;
+		}
+
+		&__descr {
+			font-size: 18px;
+
+			&--sm {
+				margin-bottom: 30px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.game-detail-section {
+		&__title {
+			font-size: 28px;
+		}
+	}
+
+	.game-detail-bottom {
+		margin-bottom: 50px;
+		padding: 0;
+
+		&__title {
+			font-size: 28px;
+		}
+		&__price {
+			font-size: 26px;
+		}
+		&__btn {
+			width: 220px;
+		}
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.game-detail {
 		padding: 0 85px;

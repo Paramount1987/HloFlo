@@ -67,6 +67,42 @@
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	.game-gift {
+		padding: 0;
+
+		&__title {
+			margin-bottom: 0;
+			font-size: 28px;
+
+			&-sp {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.game-gift-form {
+		padding: 0;
+		&__title {
+			font-size: 32px;
+		}
+		&__descr {
+			font-size: 18px;
+			&--sm {
+				font-size: 16px;
+			}
+		}
+		&__input {
+			font-size: 24px;
+			height: 60px;
+		}
+		&__submit {
+			font-size: 24px;
+			height: 60px;
+		}
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.game-gift {
 		padding: 0 85px;

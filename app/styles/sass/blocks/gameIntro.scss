@@ -17,3 +17,21 @@
 		margin-bottom: 50px;
 	}
 }
+
+@include media-breakpoint-down(sm) {
+	.game-intro {
+		margin-bottom: 40px;
+		padding: 0;
+
+		&__title {
+			font-size: 28px;
+
+			img {
+				width: 50px;
+			}
+		}
+	}
+	.games-list {
+		margin-bottom: 50px;
+	}
+}

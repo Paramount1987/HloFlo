@@ -137,6 +137,36 @@
 	}
 }
 
+@include media-breakpoint-down(sm) {
+	.swiper-game-gift {
+		margin: 0 -15px 35px -15px;
+		padding: 50px 15px 20px 15px;
+
+	.swiper-slide {
+		width: 260px;
+		height: 180px;
+	}
+}
+
+	.slide-game-gift {
+		width: 260px;
+		height: 180px;
+
+		&__title {
+			font-size: 18px;
+		}
+		&__price {
+			font-size: 22px;
+		}
+		&__link {
+			bottom: 25px;
+			&.deg-right {
+				bottom: 20px;
+		}
+		}
+	}
+}
+
 @include media-breakpoint-up(xl) {
  .swiper-game-gift {
 	 padding-top: 20px;
