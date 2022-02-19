@@ -275,9 +275,13 @@
 							transform: rotateY(180deg);
 						}
 					}
-					&:last-child {
-						margin-right: 70vw;
-					}
+				}
+
+				&:after {
+					content: '';
+					padding-right: 70vw;
+					display: block;
+					height: 100px;
 				}
 			}
 		}
@@ -304,9 +308,13 @@
 							transform: rotateY(180deg);
 						}
 					}
-					&:last-child {
-						margin-right: 70vw;
-					}
+				}
+
+				&:after {
+					content: '';
+					padding-right: 70vw;
+					display: block;
+					height: 100px;
 				}
 			}
 		}
@@ -333,9 +341,13 @@
 							transform: rotateY(180deg);
 						}
 					}
-					&:last-child {
-						margin-right: 70vw;
-					}
+				}
+
+				&:after {
+					content: '';
+					padding-right: 70vw;
+					display: block;
+					height: 100px;
 				}
 			}
 		}
