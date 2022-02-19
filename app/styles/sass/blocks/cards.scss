@@ -262,7 +262,10 @@
 				height: 300px;
 				padding: 10px 0 0 70vw;
 				pointer-events: auto;
-				overflow: auto;
+
+        @media (pointer: coarse) {
+          overflow: auto;
+        }
 
 				.card-wrap {
 					z-index: 15;
@@ -288,7 +291,10 @@
 				height: 300px;
 				padding: 10px 0 0 70vw;
 				pointer-events: auto;
-				overflow: auto;
+
+        @media (pointer: coarse) {
+          overflow: auto;
+        }
 
 				.card-wrap {
 					z-index: 15;
@@ -314,7 +320,10 @@
 				height: 300px;
 				padding: 10px 0 0 70vw;
 				pointer-events: auto;
-				overflow: auto;
+				
+        @media (pointer: coarse) {
+          overflow: auto;
+        }
 
 				.card-wrap {
 					z-index: 15;
