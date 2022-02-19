@@ -1,14 +1,11 @@
 .cards {
 	&-wrapper {
 		position: relative;
-		width: 100%;
+		width: 200px;
 		height: 270px;
-		margin: 20px 0 150px 0;
+		margin: 20px auto 150px auto;
 
 		@include media-breakpoint-up(md) {
-			position: relative;
-			width: 200px;
-			height: 270px;
 			margin: 70px auto 200px auto;
 		}
 		@include media-breakpoint-up(xl) {
@@ -41,6 +38,7 @@
 			.card {
 				width: 185px;
 				transition: transform 1.1s;
+
 				@include media-breakpoint-down(md) {
 					right: auto;
 					left: 50%;
@@ -72,7 +70,9 @@
 			top: 5px;
 
 			.card.trnsl {
-				transform: translate(20px, 5px) rotate(7.2deg);
+				@include media-breakpoint-up(md) {
+					transform: translate(20px, 5px) rotate(7.2deg);
+				}
 			}
 			.card__front {
 				background-color: #e4d3c5;
@@ -98,7 +98,9 @@
 			top: -3px;
 
 			.card.trnsl {
-				transform: translate(35px, -35px);
+				@include media-breakpoint-up(md) {
+					transform: translate(35px, -35px);
+				}
 			}
 
 			.card__front {
@@ -126,7 +128,9 @@
 			transform: rotate(-4deg);
 
 			.card.trnsl {
-				transform: rotate(-6deg) translate(-30px, -30px);
+				@include media-breakpoint-up(md) {
+					transform: rotate(-6deg) translate(-30px, -30px);
+				}
 			}
 
 			.card__front {
@@ -154,7 +158,9 @@
 			transform: rotate(3.5deg);
 
 			.card.trnsl {
-				transform: translate(-15px, 5px) rotate(3.5deg);
+				@include media-breakpoint-up(md) {
+					transform: translate(-15px, 5px) rotate(3.5deg);
+				}
 			}
 
 			.card__front {
@@ -226,6 +232,7 @@
 
 	&__avatar {
 		display: block;
+		margin: 0 auto;
 	}
 
 	&__link {
@@ -243,46 +250,83 @@
 	}
 }
 
-.cards-list__item {
-	@include media-breakpoint-down(md) {
-		position: absolute;
-		left: 0;
-		display: flex;
-		width: 100%;
-		height: 370px;
-		padding: 50px 20px 100px 20px;
-		overflow-x: scroll;
-		pointer-events: none;
-
-		.card {
-			position: relative;
-		}
-	}
-}
-
 .cards-list {
 	@include media-breakpoint-down(md) {
 		&[data-active="link-doer"] {
 			.cards-list__item[data-type="doer"] {
+				display: flex;
+				position: absolute;
+				left: calc(-50vw + 100px);
+				right: calc(-50vw + 100px);
+				top: -5px;
+				height: 300px;
+				padding: 10px 0 0 70vw;
 				pointer-events: auto;
+				overflow: auto;
+
 				.card-wrap {
 					z-index: 15;
+					.card {
+						position: relative;
+						&:hover {
+							transform: rotateY(180deg);
+						}
+					}
+					&:last-child {
+						margin-right: 70vw;
+					}
 				}
 			}
 		}
 		&[data-active="link-joyer"] {
 			.cards-list__item[data-type="joyer"] {
+				display: flex;
+				position: absolute;
+				left: calc(-50vw + 100px);
+				right: calc(-50vw + 100px);
+				top: -5px;
+				height: 300px;
+				padding: 10px 0 0 70vw;
 				pointer-events: auto;
+				overflow: auto;
+
 				.card-wrap {
 					z-index: 15;
+					.card {
+						position: relative;
+						&:hover {
+							transform: rotateY(180deg);
+						}
+					}
+					&:last-child {
+						margin-right: 70vw;
+					}
 				}
 			}
 		}
 		&[data-active="link-camer"] {
 			.cards-list__item[data-type="camer"] {
+				display: flex;
+				position: absolute;
+				left: calc(-50vw + 100px);
+				right: calc(-50vw + 100px);
+				top: -5px;
+				height: 300px;
+				padding: 10px 0 0 70vw;
 				pointer-events: auto;
+				overflow: auto;
+
 				.card-wrap {
 					z-index: 15;
+					.card {
+						position: relative;
+						&:hover {
+							transform: rotateY(180deg);
+						}
+					}
+					&:last-child {
+						margin-right: 70vw;
+					}
 				}
 			}
 		}
@@ -486,4 +530,9 @@
 			}
 		}
 	}
+}
+
+@include media-breakpoint-down(md) {
+
+
 }
