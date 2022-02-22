@@ -7,7 +7,7 @@
 		position: absolute;
 		top: -35px;
 		right: 20px;
-		width: 150px;
+		width: 200px;
 		border-radius: 20px;
 		transition: transform 1s;
 		transform: rotate(5.6deg);
@@ -33,7 +33,7 @@
 		font-size: 24px;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(md) {
 		margin-bottom: 50px;
 		padding: 0;
 
@@ -47,7 +47,6 @@
 		&__pic {
 			position: static;
 			display: block;
-			width: 125px;
 			margin: 0 auto 20px auto;
 		}
 	}
@@ -55,7 +54,7 @@
 	@include media-breakpoint-up(md) {
 		&__pic {
 			right: 40px;
-			width: 187px;
+			width: 250px;
 		}
 
 		&__title {
@@ -78,10 +77,6 @@
 
 	@include media-breakpoint-up(xl) {
 		margin-bottom: 200px;
-
-		&__pic {
-			width: 300px;
-		}
 
 		&__descr {
 			max-width: 600px;

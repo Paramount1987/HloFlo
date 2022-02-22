@@ -9,6 +9,8 @@
 			margin: 70px auto 200px auto;
 		}
 		@include media-breakpoint-up(xl) {
+			width: 240px;
+			height: 320px;
 			margin: 50px auto 150px auto;
 		}
 	}
@@ -27,6 +29,11 @@
 	transform-style: preserve-3d;
 	transition: transform .8s;
 
+	@include media-breakpoint-up(xl) {
+		width: 240px;
+		height: 320px;
+	}
+
 	&-wrap {
 		position: relative;
 		perspective: 1000px;
@@ -38,6 +45,11 @@
 			.card {
 				width: 185px;
 				transition: transform 1.1s;
+
+				@include media-breakpoint-up(xl) {
+					width: 230px;
+					height: 310px;
+				}
 
 				@include media-breakpoint-down(md) {
 					right: auto;
@@ -457,85 +469,85 @@
 	@include media-breakpoint-up(xl) {
 		&[data-active="link-camer"] {
 			.card-wrap--curator .card {
-				transform: translate(230px, -95px) rotate(-5deg);
+				transform: translate(260px, -95px) rotate(-5deg);
 	
 				&:hover {
-					transform: translate(230px, -95px) rotateY(180deg);
+					transform: translate(260px, -95px) rotateY(180deg);
 				}
 			}
 			.card-wrap--wizard .card {
-				transform: translate(430px, 35px) rotate(14deg);
+				transform: translate(485px, 35px) rotate(12deg);
 	
 				&:hover {
-					transform: translate(430px, 35px) rotateY(180deg);
+					transform: translate(485px, 35px) rotateY(180deg);
 				}
 			}
 			.card-wrap--sage .card {
-				transform: translate(-220px, -80px) rotate(12deg);
+				transform: translate(-260px, -80px) rotate(12deg);
 	
 				&:hover {
-					transform: translate(-220px, -80px) rotateY(180deg);
+					transform: translate(-260px, -80px) rotateY(180deg);
 				}
 			}
 			.card-wrap--simple .card {
-				transform: translate(-415px, -30px) rotate(-9deg);
+				transform: translate(-480px, -30px) rotate(-9deg);
 	
 				&:hover {
-					transform: translate(-415px, -30px) rotateY(180deg);
+					transform: translate(-480px, -30px) rotateY(180deg);
 				}
 			}
 		}
 	
 		&[data-active="link-joyer"] {
 			.card-wrap--droll .card {
-				transform: translate(230px, -95px) rotate(-5deg);
+				transform: translate(260px, -95px) rotate(-5deg);
 	
 				&:hover {
-					transform: translate(230px, -95px) rotateY(180deg);
+					transform: translate(260px, -95px) rotateY(180deg);
 				}
 			}
 			.card-wrap--lover .card {
-				transform: translate(430px, 35px) rotate(14deg);
+				transform: translate(480px, 35px) rotate(12deg);
 	
 				&:hover {
-					transform: translate(430px, 35px) rotateY(180deg);
+					transform: translate(480px, 35px) rotateY(180deg);
 				}
 			}
 			.card-wrap--creator .card {
-				transform: translate(-220px, -80px) rotate(12deg);
+				transform: translate(-245px, -90px) rotate(10deg);
 	
 				&:hover {
-					transform: translate(-220px, -80px) rotateY(180deg);
+					transform: translate(-245px, -90px) rotateY(180deg);
 				}
 			}
 			.card-wrap--nice .card {
-				transform: translate(-415px, -30px) rotate(-9deg);
+				transform: translate(-475px, -30px) rotate(-8deg);
 	
 				&:hover {
-					transform: translate(-415px, -30px) rotateY(180deg);
+					transform: translate(-475px, -30px) rotateY(180deg);
 				}
 			}
 		}
 	
 		&[data-active="link-doer"] {
 			.card-wrap--ruler .card {
-				transform: translate(220px, -95px) rotate(-5deg);
+				transform: translate(225px, -100px) rotate(-4deg);
 	
 				&:hover {
-					transform: translate(220px, -95px) rotateY(180deg);
+					transform: translate(225px, -100px) rotateY(180deg);
 				}
 			}
 	
 			.card-wrap--hero .card {
-				transform: translate(430px, 35px) rotate(14deg);
+				transform: translate(455px, 35px) rotate(10deg);
 	
 				&:hover {
-					transform: translate(430px, 35px) rotateY(180deg);
+					transform: translate(455px, 35px) rotateY(180deg);
 				}
 			}
 	
 			.card-wrap--searcher .card {
-				transform: translate(-210px, -90px) rotate(14deg);
+				transform: translate(-210px, -90px) rotate(12deg);
 	
 				&:hover {
 					transform: translate(-210px, -90px) rotateY(180deg);
@@ -543,10 +555,10 @@
 			}
 	
 			.card-wrap--rebel .card {
-				transform: translate(-410px, -30px) rotate(-11deg);
+				transform: translate(-440px, -30px) rotate(-10deg);
 	
 				&:hover {
-					transform: translate(-410px, -30px) rotateY(180deg);
+					transform: translate(-440px, -30px) rotateY(180deg);
 				}
 			}
 		}
