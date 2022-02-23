@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 
+	const btnNextSwiperReview = document.querySelector('.js-swiper-review-next');
+	btnNextSwiperReview.addEventListener('click', function () {
+		swiperReview.slideNext();
+	});
+
 	const swiperGame = new Swiper(".swiper-game", {
 		slidesPerView: "auto",
 		spaceBetween: 15,
@@ -42,11 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+	const btnNextSwiperGame = document.querySelector('.js-swiper-game-next');
+	btnNextSwiperGame.addEventListener('click', function () {
+		swiperGame.slideNext();
+	});
 
 	const swiperGameGift = new Swiper(".swiper-game-gift", {
 		slidesPerView: "auto",
-		spaceBetween: 15,
-
+		spaceBetween: 15, 
 		simulateTouch: false,
 
 		breakpoints: {

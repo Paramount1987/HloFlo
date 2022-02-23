@@ -224,6 +224,23 @@
 	}
 }
 
+.swiper-backdrop-btn-next {
+	position: absolute;
+	z-index: 10;
+	right: 1px;
+	top: 100px;
+	bottom: 50px;
+	width: 60px;
+	cursor: pointer;
+
+	@include media-breakpoint-up(sm) {
+		width: 100px;
+	}
+	@include media-breakpoint-up(md) {
+		width: 150px;
+	}
+}
+
 @include media-breakpoint-down(sm) {
 	.swiper-game-wrapper {
 		margin-bottom: 40px;
