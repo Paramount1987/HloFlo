@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const btnNextSwiperReview = document.querySelector('.js-swiper-review-next');
-	btnNextSwiperReview.addEventListener('click', function () {
-		swiperReview.slideNext();
-	});
+	if (btnNextSwiperReview) {
+		btnNextSwiperReview.addEventListener('click', function () {
+			swiperReview.slideNext();
+		});
+	}
 
 	const swiperGame = new Swiper(".swiper-game", {
 		slidesPerView: "auto",
@@ -48,9 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 	const btnNextSwiperGame = document.querySelector('.js-swiper-game-next');
-	btnNextSwiperGame.addEventListener('click', function () {
-		swiperGame.slideNext();
-	});
+	if (btnNextSwiperGame) {
+		btnNextSwiperGame.addEventListener('click', function () {
+			swiperGame.slideNext();
+		});
+	}
 
 	const swiperGameGift = new Swiper(".swiper-game-gift", {
 		slidesPerView: "auto",
